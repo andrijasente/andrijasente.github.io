@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research homepage of Andrija Sente. Investigating neurotransmitter receptors, structural characterization, and computational biology.">
+    <title>Andrija Sente - Research Homepage</title>
+	<link rel="icon" type="image/png" href="pics/THIP.png">
+	<!--<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▪️</text></svg>">-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Accessibility: Ensure tab panels are focusable but don't show the default outline when focused via script */
+        [role="tabpanel"]:focus {
+            outline: none;
+        }
+        .nav-link.active {
+            border-bottom-width: 2px;
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+        /* Standardized section heading style */
+        .section-heading {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+        .publication-date {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+        .press-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        .press-item strong {
+            flex-shrink: 0;
+            width: 180px; /* Adjust as needed */
+        }
+        /* Style for the gallery image to maintain aspect ratio and fit within the container */
+        .gallery-image {
+            aspect-ratio: 16 / 9;
+            object-fit: contain; /* Use contain to see the whole image */
+            width: 100%;
+            height: 100%;
+            background-color: #f3f4f6; /* A light background for letterboxing */
+        }
+        .carousel-item {
+            transition: opacity 0.7s ease-in-out;
+        }
+        /* Accessibility: Disable transitions if the user prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .carousel-item, .transition-transform, .transition-opacity, .transition-colors, .transition {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <h1 class="text-3xl font-bold">Andrija Sente</h1>
+                    <p class="text-md text-gray-300">Research Homepage</p>
+                </div>
+                <nav id="nav-menu" class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6" role="tablist" aria-label="Main Navigation">
+                    <a href="#home" class="nav-link px-3 py-2 text-gray-300 hover:text-white transition duration-300" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    <a href="#publications" class="nav-link px-3 py-2 text-gray-300 hover:text-white transition duration-300" role="tab" aria-controls="publications" aria-selected="false">Publications</a>
+                    <a href="#bio" class="nav-link px-3 py-2 text-gray-300 hover:text-white transition duration-300" role="tab" aria-controls="bio" aria-selected="false">Bio</a>
+                    <a href="#press" class="nav-link px-3 py-2 text-gray-300 hover:text-white transition duration-300" role="tab" aria-controls="press" aria-selected="false">Press</a>
+                    <a href="#resources" class="nav-link px-3 py-2 text-gray-300 hover:text-white transition duration-300" role="tab" aria-controls="resources" aria-selected="false">Resources</a>
+                    <a href="#contact" class="nav-link px-3 py-2 text-gray-300 hover:text-white transition duration-300" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        
+        <section id="home" class="tab-content active" role="tabpanel" tabindex="0">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Research Interests</h2>
+                <div class="space-y-4 text-gray-700 leading-relaxed">
+                    <p>Information processing in the brain requires a precise balance between excitation and inhibition in the neuronal microcircuitry. Disturbances to this equilibrium are correlated with several common psychiatric disorders, and many psychoactive substances and therapeutics function by modulating it.</p>
+                    <p>I investigate how this balance is set and maintained at a molecular level through the structural characterization of neurotransmitter receptors and their complexes, as well as through the lens of computational biology. You can read more about my work on GABA<sub>A</sub> receptors in my recent essay published in Science, <a href="https://www.science.org/doi/10.1126/science.adt8990" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Gatekeepers of the brain: Identifying hidden mechanisms of type A GABA receptor signaling and assembly</a>.</p>
+                    <p>More generally, I am excited by the quest for a better understanding of how the precise wiring of the nervous system is achieved during development, how this patterning is dictated by genetic information, and how and why it goes awry in neurodevelopmental disorders. Most disorders on the neurodevelopmental spectrum are strongly determined by genetics; for example, schizophrenia and autism-spectrum disorder are over 80% genetically determined, yet our ability to interpret this predisposition and vulnerability remains limited. I recently discussed some of these topics in an interview with <a href="https://www.science.org/content/article/scienceadviser-during-drought-hungry-deer-do-baby-oaks-solid" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline"><i>Science</i>Adviser</a></p>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="section-heading">Research Preview</h3>
+                    <div id="research-carousel" class="relative w-full max-w-4xl mx-auto">
+                        <div class="relative h-80 overflow-hidden rounded-lg md:h-96 shadow-lg bg-gray-100" aria-live="polite">
+                            
+                            <div data-carousel-item="0" class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
+                                <img src="pics/ch3-figure1.jpg" class="gallery-image cursor-pointer" alt="Diagram illustrating the differential assembly of GABAA receptors.">
+                                <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-60 text-white text-center">
+                                    <p class="text-sm italic">Differential assembly of GABA<sub>A</sub> receptors (PMID: 35355020).</p>
+                                </div>
+                            </div>
+
+                            <div data-carousel-item="1" class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none">
+                                <img src="pics/Screenshot 2025-09-07 at 01.24.55.png" class="gallery-image cursor-pointer" alt="Cryo-EM structure of the GABAA receptor α1 subunit complexed with the assembly factor NACHO.">
+                                <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-60 text-white text-center">
+                                    <p class="text-sm italic">Structure of the GABA<sub>A</sub> receptor α1 subunit in complex with the assembly factor NACHO (PMID: 39553992).</p>
+                                </div>
+                            </div>
+
+                            <div data-carousel-item="2" class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none">
+                                <img src="pics/Screenshot 2025-09-07 at 01.24.09.png" class="gallery-image cursor-pointer" alt="High-resolution (1.7 Å) Cryo-EM map reconstruction of the GABAA receptor.">
+                                <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-60 text-white text-center">
+                                    <p class="text-sm italic">GABA<sub>A</sub> receptor map reconstructed to 1.7 Å (PMID: 33087931).</p>
+                                </div>
+                            </div>
+
+                            <div data-carousel-item="3" class="carousel-item absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none">
+                                <img src="pics/Screenshot 2025-09-07 at 01.16.49.png" class="gallery-image cursor-pointer" alt="Detailed views of the 1.7 Å GABAA receptor map showing ligand coordination, modifications, and hydrogen bonds.">
+                                <div class="absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-60 text-white text-center">
+                                    <p class="text-sm italic">Examples of features visible in the GABA<sub>A</sub> receptor map reconstructed to 1.7 Å: ligand coordination in the agonist pocket, post-translational modifications, and hydrogen bond networks (PMID: 33087931).</p>
+                                </div>
+                            </div>
+                        </div> <button type="button" id="carousel-prev" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" aria-label="Previous Slide">
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" id="carousel-next" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" aria-label="Next Slide">
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="tab-content" role="tabpanel" tabindex="0">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Publications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="md:col-span-2 text-gray-700 leading-relaxed">
+                        <p class="mb-6">A complete and up-to-date list of my publications can be found on my <a href="https://scholar.google.com/citations?user=KrVWJb4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Google Scholar profile</a>.</p>
+                        <p class="mb-4 text-sm italic">(* indicates corresponding author, ¹ indicates joint first authors)</p>
+                        <div class="publication-date">2024</div>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Sente A. <strong>Gatekeepers of the brain: Identifying hidden mechanisms of type A GABA receptor signaling and assembly</strong>. Science. 2024 Nov 15;386(6723):738-9.</li>
+                            <li>Hooda Y¹, Sente A¹, Judy RM¹, Smalinskaitė L, Peak-Chew SY, Naydenova K, Malinauskas T, Hardwick SW, Chirgadze DY, Aricescu AR, Hegde RS. <strong>Mechanism of NACHO-mediated assembly of pentameric ligand-gated ion channels</strong>. bioRxiv. 2024 Nov 15.</li>
+                        </ul>
+                        <div class="publication-date">2022</div>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Sente A*, Desai R, Naydenova K, Malinauskas T, Jounaidi Y, Miehling J, Zhou X, Masiulis S, Hardwick SW, Chirgadze DY, Miller KW*, Aricescu AR*, <strong>Differential assembly diversifies GABA<sub>A</sub> receptor structures and signaling</strong>, Nature (2022)</li>
+                            <li>Kleist AB¹, Jenjak S¹, Sente A, Laskowski LJ, Anderson EI, McNally LM, Heukers R, Bobkov V, Peterson FC, Thomas MA, Chevigné A, Smit MJ, McCorvy JD, Babu MM, Volkman BF, <strong>Conformational selection guides β-arrestin recruitment at an intrinsically biased G protein-coupled receptor</strong>, Science (2022)</li>
+                        </ul>
+                        <div class="publication-date">2021</div>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Uchański T, Masiulis S, Fischer B, Kalichuk V, López-Sánchez U, Zarkadas E, Weckener M, Sente A, Ward P, Wohlkönig A, Zögg T, Remaut T, Naismith JH, Nury H, Vranken W, Aricescu AR, Pardon E, Steyaert J, <strong>Megabodies expand the nanobody toolkit for protein structure determination by single-particle cryo-EM</strong>, Nature Methods (2021)</li>
+                        </ul>
+                        <div class="publication-date">2020</div>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Nakane T¹, Kotecha A¹, Sente A¹, McMullan G, Masiulis S, Brown PMGE, Grigoras IT, Malinauskaite L, Malinauskas T, Miehling J, Yu L, Karia D, Pechnikova EV, de Jong E, Keizer J, Bischoff M, McCormack J, Tiemeijer P, Hardwick SW, Chirgadze DY, Murshudov G, Aricescu AR*, Scheres SHW*, <strong>Single-particle cryo-EM at atomic resolution</strong>, Nature (2020)</li>
+                        </ul>
+                        <div class="publication-date">2018</div>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Sente A*, Peer R, Srivastava A, Baidya M, Lesk AM, Balaji S, Shukla AK, Babu MM*, Flock T*, <strong>Molecular mechanism of modulating arrestin conformation by GPCR phosphorylation</strong>, Nature Struct. Mol. Biol. (2018)</li>
+                        </ul>
+                    </div>
+					<div class="md:col-span-1">
+					    <div class="space-y-8">
+					        <div class="flex justify-center">
+					            <img src="pics/naslovnica_science_2024.jpg" alt="Science Journal Cover, November 2024" class="journal-cover-image block w-2/3 rounded-lg shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105">
+					        </div>
+					        <div class="flex justify-center">
+					            <img src="pics/naslovnica_nature_2020.png" alt="Nature Journal Cover, October 2020" class="journal-cover-image block w-2/3 rounded-lg shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105">
+					        </div>
+					    </div>
+					</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="bio" class="tab-content" role="tabpanel" tabindex="0">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Short Bio</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2">
+                        <div class="space-y-4 text-gray-700 leading-relaxed">
+                            <p>I completed the Medical and Veterinary Science Tripos at the University of Cambridge. During this time, I honed my research skills as a summer student at the MRC Laboratory of Molecular Biology, working on the regulation of G-protein coupled receptor signaling (with <a href="https://www.stjude.org/research/labs/babu-lab.html" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">M. Madan Babu</a> and <a href="https://ch.linkedin.com/in/tilman-flock" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Tilman Flock</a>), nucleosome remodelling (with <a href="https://www2.mrc-lmb.cam.ac.uk/group-leaders/a-to-g/david-barford/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">David Barford</a> and <a href="https://www.linkedin.com/in/tobias-wauer-phd-5533a51" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Tobias Wauer</a>), and hypoxia sensing (with <a href="https://ist.ac.at/en/research/de-bono-group/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Mario de Bono</a> and <a href="https://www.umu.se/en/research/groups/changchun-chen/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Changchun Chen</a>).</p>
+                            <p>Following the completion of Stage 1 clinical training, I was selected for the Cambridge University Clinical School's MB/PhD program. I conducted my PhD research in <a href="https://www2.mrc-lmb.cam.ac.uk/group-leaders/a-to-g/radu-aricescu/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Radu Aricescu</a>'s group in the MRC LMB's Neurobiology division, where I also stayed for a short post-doc. During this time, I was part of a large academia-industry collaboration that resulted in the first atomic-resolution reconstruction of a biological specimen by cryo-EM. This work was included in the <a href="https://www.nature.com/articles/d41586-020-03514-8" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">top 10 scientific breakthroughs of 2020</a> in the annual list compiled by Nature.</p>
+                            <p>My work has been recognized by the British Neuroscience Association's Postgraduate Prize and the Grand Prize of the <a href="https://scienceprize.scilifelab.se/winners/andrija-sente/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">2024 Science and SciLifeLab Award for Young Scientists</a>.</p>
+                            <p>Currently, I am a Research Scientist in Machine Learning at InstaDeep Ltd. (a BioNTech company).</p>
+                            <p>Outside of research, I am a musician and sports enthusiast: I love football, chess and hold a black belt in Shotokan karate. I also enjoy books, movies, TV series and spending time in nature.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="pics/IMG-20220914-WA0033.jpg" alt="Andrija Sente standing in front of the hoodoos at Bryce Canyon National Park." class="rounded-lg shadow-md">
+                        <p class="text-center text-sm text-gray-500 mt-2 italic">Bryce Canyon National Park, 2022</p>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="section-heading">Academic History</h3>
+                       <div class="space-y-6">
+                           <div>
+                               <p class="font-semibold text-gray-900">2022-2023</p>
+                               <p class="text-gray-700 ml-4">Postdoctoral Fellow (MRC Laboratory of Molecular Biology, Cambridge, UK)</p>
+                           </div>
+                           <div>
+                               <p class="font-semibold text-gray-900">2018-2022</p>
+                               <div class="text-gray-700 ml-4">
+                                   <p>PhD in Natural Sciences (MRC Laboratory of Molecular Biology and University of Cambridge MB/PhD program)</p>
+                                   <ul class="list-disc pl-5 mt-1">
+                                         <li>Thesis: "<a href="https://www.repository.cam.ac.uk/items/e87d9b40-7091-40ca-9981-21ce85749ecb" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">A Structural and Computational Study of GABA<sub>A</sub> Receptor Diversity</a>"</li>
+                                           <li>Supervisor: <a href="https://www2.mrc-lmb.cam.ac.uk/group-leaders/a-to-g/radu-aricescu/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Radu Aricescu</a>, second supervisors: <a href="https://www.stjude.org/research/labs/babu-lab.html" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">M. Madan Babu</a>, <a href="https://en.wikipedia.org/wiki/Tom_Blundell" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Tom Blundell</a></li>
+                                       </ul>
+
+                               </div>
+                           </div>
+                           <div>
+                               <p class="font-semibold text-gray-900">2017-2018</p>
+                               <p class="text-gray-700 ml-4">Stage 1 Clinical training (University of Cambridge School of Clinical Medicine)</p>
+                           </div>
+                           <div>
+                               <p class="font-semibold text-gray-900">2014-2017</p>
+                               <p class="text-gray-700 ml-4">Medical and Veterinary Science Tripos (University of Cambridge)</p>
+                           </div>
+                       </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="press" class="tab-content" role="tabpanel" tabindex="0">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Press Coverage</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    
+                    <div class="md:col-span-2 text-gray-700 leading-relaxed">
+                        <h3 class="section-heading">🇬🇧 English</h3>
+                        <div class="publication-date">2025</div>
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Science & SciLifeLab:</strong> <a href="https://www.youtube.com/watch?v=4oDxIjzGMIQ" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Andrija Sente, 2024 Grand Prize winner of Science & SciLifeLab Prize for Young Scientists</a></li>
+                        </ul>
+                        <div class="publication-date">2024</div>
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Businessweekly:</strong> <a href="https://www.businessweekly.co.uk/posts/brain-gain-as-cambridge-scientist-scoops-global-prize" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Brain gain as Cambridge scientist scoops global prize</a></li>
+                            <li><strong><i>Science</i>Adviser Protostar:</strong> <a href="https://www.science.org/content/article/scienceadviser-during-drought-hungry-deer-do-baby-oaks-solid" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">During drought, hungry deer do baby oaks a solid</a></li>
+                            <li><strong>AAAS:</strong> <a href="https://www.aaas.org/news/unexpected-variety-neurotransmitter-receptors-underlies-diverse-brain-functions" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Unexpected Variety in Neurotransmitter Receptors Underlies Diverse Brain Functions</a></li>
+                            <li><strong>Neuroscience News:</strong> <a href="https://neurosciencenews.com/gaba-receptors-neuroscience-28061/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Unlocking GABA Receptors</a></li>
+                            <li><strong>SciLifeLab:</strong> <a href="https://www.scilifelab.se/news/prizewinner-reveals-unecpected-variety-in-neurotransmitter-receptors/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Prize winner reveals unexpected variety in neurotransmitter receptors</a></li>
+                        </ul>
+                        <div class="publication-date">2022</div>
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Cambridge Independent:</strong> <a href="https://www.cambridgeindependent.co.uk/news/discovery-could-change-our-understanding-of-molecular-neuros-9248692/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Discovery over receptors could change our understanding of molecular neuroscience, says MRC Laboratory of Molecular Biology</a></li>
+                            <li><strong>MRC LMB Insight on Research:</strong> <a href="https://www2.mrc-lmb.cam.ac.uk/structural-study-reveals-unexpected-diversity-in-gabaa-receptor-assembly/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Structural study reveals unexpected diversity in GABA<sub>A</sub> receptor assembly</a></li>
+                        </ul>
+                        <div class="publication-date">2020</div>
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Nature:</strong> <a href="https://www.nature.com/articles/d41586-020-03514-8" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Viruses, microscopy and fast radio bursts: 10 remarkable discoveries from 2020</a></li>
+                            <li><strong>Nature Methods:</strong> <a href="https://www.nature.com/articles/s41592-020-01014-1" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Cryo-EM goes atomic</a></li>
+                            <li><strong>Nature:</strong> <a href="https://www.nature.com/articles/d41586-020-02924-y" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Cryo-electron microscopy reaches atomic resolution</a></li>
+                            <li><strong>Trends in Biochemical Sciences:</strong> <a href="https://www.cell.com/trends/biochemical-sciences/abstract/S0968-0004(21)00003-7?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0968000421000037%3Fshowall%3Dtrue" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Seeing Atoms by Single-Particle Cryo-EM</a></li>
+                            <li><strong>Phys.org:</strong> <a href="https://phys.org/news/2020-10-scientists-resolution-visualize-individual-atoms.html" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Scientists break resolution records to visualize individual atoms with single-particle cryo-EM</a></li>
+                            <li><strong>MRC LMB Insight on Research:</strong> <a href="https://www2.mrc-lmb.cam.ac.uk/atomic-advance-for-cryo-em/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Atomic advance for cryo-EM</a></li>
+                        </ul>
+                        <div class="publication-date">2018</div>
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Nature Structural & Molecular Biology:</strong> <a href="https://www.nature.com/articles/s41594-018-0077-x" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Strength in numbers—an arrestin interaction code</a></li>
+                        </ul>
+    
+                        <h3 class="section-heading">🇭🇷 Croatian</h3>
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Hrvatska riječ:</strong> <a href="https://www.hrvatskarijec.rs/vijest/A38030/Mladi-uspjesni-znanstvenik--na-ponos-zajednice/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Mladi uspješni znanstvenik na ponos zajednice</a></li>
+                            <li><strong>Zavod za kulturu vojvođanskih Hrvata:</strong> <a href="https://zkvh.org.rs/aktualnosti-post/vijesti/andrija-sente-doktor-prirodnih-znanosti-intervju" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Andrija Sente, doktor prirodnih znanosti, intervju</a></li>
+                        </ul>
+    
+                        <h3 class="section-heading">🇷🇸 Serbian</h3>
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Politika:</strong> <a href="https://www.politika.rs/sr/clanak/651873/andrija-sente-najbolji-naucnik" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Andrija Sente – najbolji naučnik</a></li>
+                            <li><strong>RTS:</strong> <a href="https://www.rts.rs/lat/vesti/srbija-danas/5611627/od-subotice-preko-kembridza-do-stokholma-i-prestizne-nagrade.html" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Od Subotice preko Kembridža, do Stokholma i prestižne nagrade</a></li>
+                            <li><strong>Subotičke.rs:</strong> <a href="https://www.youtube.com/watch?v=XgYruTVRC_4" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Andrija Sente – izuzetan mladi naučnik između Kembridža i Subotice</a></li>
+                            <li><strong>RTV:</strong> <a href="https://www.youtube.com/watch?v=17W_Bd_L0LE" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Andrija Sente iz Subotice najbolji mladi naučnik po oceni američkog Sajensa</a></li>
+                            <li><strong>Akademac:</strong> <a href="https://youtu.be/8x6Tch_wo1Q?si=j7FJtFolM2eT6bhG&t=1237" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Sve je moguće</a></li>
+                            <li><strong>Subotica.com:</strong> <a href="https://www.subotica.com/vesti/andrija-sente-ponos-subotice-i-svetske-nauke-id50876.html" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Andrija Sente - ponos Subotice i svetske nauke</a></li>
+                        </ul>
+                        
+                        <h3 class="section-heading">🇭🇺 Hungarian</h3>
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Magyar Szó:</strong> <a href="https://szmsz.press/2024/12/26/szabadkai-nyerte-a-legjobb-fiatal-tudos-dijat/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Szabadkai nyerte a legjobb fiatal tudós díjat</a></li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="md:col-span-1">
+                        <h3 class="section-heading">Video Features</h3>
+                        <div class="space-y-8">
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=4oDxIjzGMIQ" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                                    <img src="https://img.youtube.com/vi/4oDxIjzGMIQ/hqdefault.jpg" alt="Video thumbnail for Science & SciLifeLab Interview" class="w-full">
+                                </a>
+                                <p class="text-sm mt-3 text-gray-600"><strong>Science & SciLifeLab:</strong> interview (English)</p>
+                            </div>
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=XgYruTVRC_4" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                                    <img src="https://img.youtube.com/vi/XgYruTVRC_4/hqdefault.jpg" alt="Video thumbnail for Subotičke.rs Interview" class="w-full">
+                                </a>
+                                <p class="text-sm mt-3 text-gray-600"><strong>Subotičke.rs:</strong> Interview (Serbian)</p>
+                            </div>
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=17W_Bd_L0LE" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                                    <img src="https://img.youtube.com/vi/17W_Bd_L0LE/hqdefault.jpg" alt="Video thumbnail for RTV Interview" class="w-full">
+                                </a>
+                                <p class="text-sm mt-3 text-gray-600"><strong>Radio-televizija Vojvodine:</strong> Interview (Serbian)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="tab-content" role="tabpanel" tabindex="0">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Resources</h2>
+                <div class="text-gray-700 leading-relaxed">
+                    <h3 class="section-heading">Talks</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                        <div class="group">
+                            <a href="https://www.youtube.com/watch?v=WPVnCM5h0zQ" target="_blank" rel="noopener noreferrer" class="block rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105 mb-4">
+                                <img src="https://img.youtube.com/vi/WPVnCM5h0zQ/hqdefault.jpg" alt="Video thumbnail for CCP-EM Spring Symposium Talk" class="w-full">
+                            </a>
+                            <h4 class="text-lg font-bold text-gray-800">Structural diversity of GABA<sub>A</sub> receptors</h4>
+                            <p class="text-sm text-gray-600 mt-1">CCP-EM Spring Symposium (May 2022)</p>
+                            <p class="text-sm italic text-gray-500 mt-2">A rather old and outdated talk presented to a specialised audience of cryo-EM method developers, hence not so focused on biological discoveries.</p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content" role="tabpanel" tabindex="0">
+             <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Contact Details</h2>
+                 <div class="text-gray-700 leading-relaxed">
+                     <p class="mb-4 text-indigo-600">
+                         <span id="email-container">Loading email...</span>
+                         <noscript>
+                            <p class="text-sm text-gray-500">Contact: sente.andrija [at] gmail [dot] com</p>
+                        </noscript>
+                     </p>
+                     </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center p-4 transition-opacity duration-300" role="dialog" aria-modal="true">
+        <div class="relative bg-white p-2 rounded-lg max-w-4xl max-h-full shadow-2xl">
+            <button id="closeModal" class="absolute -top-3 -right-3 text-white bg-gray-800 rounded-full h-8 w-8 flex items-center justify-center text-2xl font-bold hover:bg-gray-600 transition-colors" aria-label="Close Image Viewer">&times;</button>
+            <img id="modalImage" src="" alt="Enlarged research image" class="max-w-full max-h-[90vh] rounded">
+        </div>
+    </div>
+
+
+    <footer class="bg-white mt-12">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>&copy; 2025 Andrija Sente. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Navigation Logic ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.tab-content');
+            const navMenu = document.getElementById('nav-menu');
+
+            function showTab(hash) {
+                const targetHash = (hash === '' || hash === '#') ? '#home' : hash;
+                let targetSection = document.querySelector(targetHash);
+				
+				// Set the document title dynamically
+	            const pageName = targetHash.substring(1); // "home", "publications", etc.
+	            document.title = `AS - ${pageName.charAt(0).toUpperCase() + pageName.slice(1)}`;
+                
+                if (!targetSection) {
+                    targetSection = document.getElementById('home');
+                }
+
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    // Accessibility: Manage aria-selected state
+                    link.setAttribute('aria-selected', 'false'); 
+
+                    if (link.getAttribute('href') === targetHash || (targetHash === '#home' && link.getAttribute('href') === '#home')) {
+                        link.classList.add('active');
+                        link.setAttribute('aria-selected', 'true');
+                    }
+                });
+
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+                return targetSection;
+            }
+            
+            navMenu.addEventListener('click', function(e) {
+                if (e.target.classList.contains('nav-link')) {
+                    e.preventDefault();
+                    const hash = e.target.getAttribute('href');
+                    history.pushState(null, null, hash);
+                    const activePanel = showTab(hash);
+                    
+                    // Accessibility: Move focus to the newly active tab panel
+                    if (activePanel) {
+                        activePanel.focus();
+                    }
+                }
+            });
+
+            window.addEventListener('popstate', function() {
+                showTab(window.location.hash);
+            });
+            
+            // Initialize tabs based on URL hash
+            showTab(window.location.hash);
+
+            // --- Image Modal Logic ---
+            const carouselContainer = document.getElementById('research-carousel');
+            const imageModal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeModal = document.getElementById('closeModal');
+
+			if (imageModal && modalImage && closeModal) {
+			                document.addEventListener('click', function(e) {
+			                    // Check if the clicked element is an image that should open the modal
+			                    if (e.target.tagName === 'IMG' && (e.target.classList.contains('gallery-image') || e.target.classList.contains('journal-cover-image'))) {
+			                        const imgSrc = e.target.src;
+			                        const imgAlt = e.target.alt;
+			                        modalImage.src = imgSrc;
+			                        modalImage.alt = imgAlt;
+			                        imageModal.classList.remove('hidden');
+			                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+			                    }
+			                });
+
+                const hideModal = () => {
+                    imageModal.classList.add('hidden');
+                    modalImage.src = ''; // Clear src to stop loading
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+
+                closeModal.addEventListener('click', hideModal);
+                
+                imageModal.addEventListener('click', function(e) {
+                    if (e.target === imageModal) {
+                        hideModal();
+                    }
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !imageModal.classList.contains('hidden')) {
+                        hideModal();
+                    }
+                });
+            }
+
+            // --- Carousel Logic ---
+            const carousel = document.getElementById('research-carousel');
+            if (carousel) {
+                const carouselItems = carousel.querySelectorAll('[data-carousel-item]');
+                const prevButton = document.getElementById('carousel-prev');
+                const nextButton = document.getElementById('carousel-next');
+                const totalItems = carouselItems.length;
+                let currentItem = 0;
+                let slideInterval;
+
+                function showItem(index) {
+                    carouselItems.forEach((item, i) => {
+                        if (i === index) {
+                            // Show the target item with a fade-in effect
+                            item.classList.remove('opacity-0', 'pointer-events-none');
+                            item.classList.add('opacity-100');
+                        } else {
+                            // Hide other items with a fade-out effect
+                            item.classList.remove('opacity-100');
+                            item.classList.add('opacity-0', 'pointer-events-none');
+                        }
+                    });
+                }
+
+                function nextItem() {
+                    currentItem = (currentItem + 1) % totalItems;
+                    showItem(currentItem);
+                }
+
+                function prevItem() {
+                    currentItem = (currentItem - 1 + totalItems) % totalItems;
+                    showItem(currentItem);
+                }
+
+                function startAutoSlide() {
+                    stopAutoSlide(); // Clear any existing interval
+
+                    // Accessibility: Check if the user prefers reduced motion before starting auto-play
+                    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                        return;
+                    }
+                    slideInterval = setInterval(nextItem, 5000); // Change image every 5 seconds
+                }
+
+                function stopAutoSlide() {
+                    clearInterval(slideInterval);
+                }
+
+                if (prevButton && nextButton) {
+                    prevButton.addEventListener('click', () => {
+                        prevItem();
+                        startAutoSlide(); // Reset interval on manual navigation
+                    });
+
+                    nextButton.addEventListener('click', () => {
+                        nextItem();
+                        startAutoSlide(); // Reset interval on manual navigation
+                    });
+                }
+
+                // Functionality/UX: Pause carousel on hover or focus
+                carousel.addEventListener('mouseenter', stopAutoSlide);
+                carousel.addEventListener('mouseleave', startAutoSlide);
+                carousel.addEventListener('focusin', stopAutoSlide);
+                carousel.addEventListener('focusout', startAutoSlide);
+
+                // Initialize the carousel
+                if (totalItems > 0) {
+                    // Note: Initialization relies on the HTML defaults (first item opacity-100)
+                    startAutoSlide();
+                }
+            }
+        });
+    </script>
+    
+    <script>
+        // Email obfuscation script
+        const user = 'sente.andrija';
+        const domain = 'gmail.com';
+        const emailContainer = document.getElementById('email-container');
+
+        if (emailContainer) {
+            const mailLink = document.createElement('a');
+            mailLink.href = 'mailto:' + user + '@' + domain;
+            mailLink.textContent = user + '@' + domain;
+            mailLink.classList.add('hover:underline');
+            // Ensure the container has a parent before replacement
+            if (emailContainer.parentNode) {
+                emailContainer.parentNode.replaceChild(mailLink, emailContainer);
+            }
+        }
+    </script>
+
+</body>
+</html>
